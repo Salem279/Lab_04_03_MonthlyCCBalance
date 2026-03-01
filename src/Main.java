@@ -1,15 +1,17 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        double balance = 5000.00;
+        double annualInterestRate = 0.17;
+        double monthlyInterestRate = annualInterestRate / 12;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        // Interest calculation for month 1
+        double interestMonth1 = balance * monthlyInterestRate;
+        balance = balance + interestMonth1;
+        System.out.println("The interest after one month is: $" + interestMonth1);
+
+        // Interest calculation for month 2
+        double interestMonth2 = balance * monthlyInterestRate;
+        balance = balance + interestMonth2;
+        System.out.println("The interest after two months is: $" + interestMonth2);
     }
 }
